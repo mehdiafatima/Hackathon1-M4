@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #00478f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.resume {
+    display: flex;
+    flex-direction: row;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    background-color: #00478f;
+    color: white;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.top-section .profile-pic img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: 80px;
+}
+
+.top-section .name-title {
+    margin-left: 50px;
+}
+
+.top-section .name {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.top-section .title {
+    font-size: 18px;
+    margin: 0;
+    color: #ddd;
+}
+
+.main-section {
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.left-section {
+    width: 28%; 
+    background-color: #222; 
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.right-section {
+    width: 72%; 
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.section h3 {
+    background-color: #00478f;
+    color: white;
+    padding: 5px;
+    margin: 0 -20px 10px -20px;
+    text-align: left;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 70px;
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+}
+
+
+.editable {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.editable:focus {
+    outline: 2px solid #00478f;
+    background-color: #e8e8e8;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+       
+        <form id="resumeForm">
+            <h2>Fill Your Information</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="aboutMe">About Me:</label>
+            <textarea id="aboutMe" name="aboutMe" placeholder="Tell us about yourself" required></textarea>
+
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" placeholder="Enter your school, degree, and year" required>
+
+            <label for="profilePic">Profile Picture URL:</label>
+            <input type="text" id="profilePic" name="profilePic" placeholder="Enter image URL or leave empty for default">
+
+            <label for="skills">Skills (separate by commas):</label>
+            <input type="text" id="skills" name="skills" placeholder="Enter skills separated by commas" required>
+
+            <label for="languages">Languages (separate by commas):</label>
+            <input type="text" id="languages" name="languages" placeholder="Enter languages you know" required>
+
+            <label for="expertise">Expertise (separate by commas):</label>
+            <input type="text" id="expertise" name="expertise" placeholder="Enter areas of expertise" required>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+       
+        <div class="resume" id="resumeSection" style="display:none;">
+            <div class="top-section">
+                <div class="profile-pic">
+                    <img src="pic3.png" alt="Profile Picture" id="profilePicImage">
+                </div>
+                <div class="name-title">
+                    <h1 id="resumeName" contenteditable="true">John Doe</h1>
+                    <h2 class="title" contenteditable="true">Software Developer</h2>
+                </div>
+            </div>
+            <div class="main-section">
+                <div class="left-section">
+                    <div class="section">
+                        <h3>About Me</h3>
+                        <p id="aboutMeText" contenteditable="true">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="section">
+                        <h3>Contact</h3>
+                        <p id="contactPhone" contenteditable="true">📞 +123-456-7890</p>
+                        <p id="contactEmail" contenteditable="true">✉️ john.doe@example.com</p>
+                    </div>
+                    <div class="section">
+                        <h3>Languages</h3>
+                        <ul id="languagesList" contenteditable="true">
+                            <li>English</li>
+                            <li>Spanish</li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <h3>Expertise</h3>
+                        <ul id="expertiseList" contenteditable="true">
+                            <li>Frontend Development</li>
+                            <li>UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="section">
+                        <h3>Experience</h3>
+                        <div id="experience" contenteditable="true">
+                            <p>No experience added yet.</p>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <h3>Education</h3>
+                        <p id="educationText" contenteditable="true">ABC University - Computer Science (2023)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
